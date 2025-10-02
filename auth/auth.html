@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Masuk | Atomix Academy</title>
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="auth.css"><!-- auth styles -->
+  <meta name="description" content="Login ke akun Atomix Academy untuk mengakses dashboard pembelajaran.">
+</head>
+<body data-page="auth">
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Logo Atomix Academy" class="logo">
+        <span>Atomix Academy</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#programs" class="nav-link">Program</a></li>
+        <li><a href="../index.html#schedule" class="nav-link">Jadwal</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Kontak</a></li>
+        <li><a href="register.html" class="btn btn-small">Daftar</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <main class="container my-40">
+    <section class="grid" style="grid-template-columns: 1.1fr .9fr; gap: 1.5rem;">
+      <div class="bg-white rounded-16 shadow-lg p-24">
+        <div class="mb-16">
+          <h1 class="text-3xl text-brand font-800 mb-8">Masuk ke Akun</h1>
+          <p class="text-muted">Gunakan <strong>username</strong> atau <strong>email</strong> beserta password.</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-12">
+            <label for="identifier" class="font-600 mb-6 block">Username / Email</label>
+            <input id="identifier" name="identifier" type="text" placeholder="contoh: andrew99 atau nama@contoh.com" required class="w-full p-12 rounded-10" />
+          </div>
+
+          <div class="mb-12">
+            <label for="password" class="font-600 mb-6 block">Kata Sandi</label>
+            <div style="position:relative;">
+              <input id="password" name="password" type="password" placeholder="••••••••" required class="w-full p-12 rounded-10 pr-40" />
+              <button type="button" id="togglePassword" aria-label="Tampilkan/Sembunyikan password" class="btn btn-small" style="position:absolute; right:6px; top:6px;">Lihat</button>
+            </div>
+          </div>
+
+          <div class="mb-12" style="display:flex; align-items:center; justify-content:space-between; gap:.75rem;">
+            <label style="display:flex; align-items:center; gap:.5rem;">
+              <input id="remember" type="checkbox"> <span>Ingat saya</span>
+            </label>
+            <a class="text-brand" href="#" onclick="alert('Hubungi admin untuk reset password.');return false;">Lupa sandi?</a>
+          </div>
+
+          <p id="loginError" class="text-base" style="color:#e53935; min-height: 22px;"></p>
+
+          <button type="submit" class="btn btn-primary w-full mt-8">Masuk</button>
+
+          <p class="mt-12 text-muted">
+            Belum punya akun?
+            <a href="register.html" class="text-brand font-600">Daftar di sini</a>
+          </p>
+
+          <details class="mt-12">
+            <summary class="cursor-pointer">Akun Demo</summary>
+            <p class="text-muted mt-8">Username: <code>Sharon</code><br/>Password: <code>Juara Atomix</code></p>
+          </details>
+        </form>
+      </div>
+
+      <aside class="rounded-16 shadow-lg p-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1200&q=80" alt="Ilustrasi pembelajaran" style="height:100%; width:100%; object-fit:cover;">
+      </aside>
+    </section>
+  </main>
+
+  <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Atomix%2C%20saya%20membutuhkan%20bantuan%20login" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp"></i><span>Butuh Bantuan?</span>
+  </a>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

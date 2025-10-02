@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ===================================================== -->
+  <!-- ================ META & BASIC INFO ================== -->
+  <!-- ===================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomix Academy | Naik Nilai, Siap SNBT & Kuliah Impian</title>
+  <meta name="description" content="Bimbel SMP & SMA dengan tutor berpengalaman, metode modern, persiapan SNBT, UTBK, dan les privat.">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- ================== GOOGLE FONTS ================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- ================== FONT AWESOME ================== -->
+  <script src="https://kit.fontawesome.com/2b8a9b6c2b.js" crossorigin="anonymous"></script>
+
+  <!-- ================== MAIN STYLES ================== -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- =================================================== -->
+  <!-- ================= NAVBAR SECTION ================== -->
+  <!-- =================================================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo Brand -->
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.png" alt="Logo Atomix Academy" class="logo">
+        <span>Atomix Academy</span>
+      </a>
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Keunggulan</a></li>
+        <li><a href="#programs" class="nav-link">Program</a></li>
+        <li><a href="#schedule" class="nav-link">Jadwal</a></li>
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#tutors" class="nav-link">Tutor</a></li>
+        <li><a href="#stats" class="nav-link">Pencapaian</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimoni</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+        <!-- Login / Dashboard -->
+        <li><a href="auth/auth.html" id="loginBtn" class="btn btn-small">Login</a></li>
+        <li><a href="dashboard/dashboard.html" id="dashboardBtn" class="btn btn-small hidden">Dashboard</a></li>
+      </ul>
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================== -->
+  <!-- ================= HERO SECTION ==================== -->
+  <!-- =================================================== -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <h1>Naik Nilai, Siap SNBT & Kuliah Impian</h1>
+        <p>
+          Atomix Academy adalah bimbel modern SMP & SMA yang fokus pada pemahaman konsep, 
+          latihan soal, dan persiapan perguruan tinggi dengan tutor terbaik.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Daftar Trial Gratis</a>
+          <a href="auth/auth.html" class="btn btn-outline">Login</a>
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="hero-image">
+        <img src="assets/img/awal.jpg" alt="Belajar bersama tutor">
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= FEATURES SECTION ================ -->
+  <!-- =================================================== -->
+  <section id="features" class="features">
+    <h2 class="section-title">Kenapa Pilih Atomix Academy?</h2>
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <i class="fas fa-user-graduate feature-icon"></i>
+        <h3>Tutor Berpengalaman</h3>
+        <p>Tutor berasal dari kampus top dengan pengalaman membimbing siswa menuju prestasi.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <i class="fas fa-laptop-code feature-icon"></i>
+        <h3>Belajar Interaktif</h3>
+        <p>Kombinasi online & offline dengan media pembelajaran modern yang menyenangkan.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <i class="fas fa-book feature-icon"></i>
+        <h3>Modul Lengkap</h3>
+        <p>Materi terstruktur dari dasar hingga level olimpiade, dengan latihan soal variatif.</p>
+      </div>
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <i class="fas fa-chalkboard-teacher feature-icon"></i>
+        <h3>Konsultasi Intensif</h3>
+        <p>Sesi tambahan konsultasi dan pendalaman materi untuk siswa yang membutuhkan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= PROGRAMS SECTION ================ -->
+  <!-- =================================================== -->
+  <section id="programs" class="programs">
+    <h2 class="section-title">Program Kami</h2>
+
+    <!-- Program SMP -->
+    <div class="program-category">
+      <h3 class="program-subtitle">Program SMP</h3>
+      <div class="programs-grid">
+        <!-- SMP Card -->
+        <div class="program-card">
+          <h4>Paket SMP</h4>
+          <p class="price">Rp 450.000 <span>/bulan</span></p>
+          <ul>
+            <li><i class="fas fa-check"></i> Matematika</li>
+            <li><i class="fas fa-check"></i> Fisika</li>
+            <li><i class="fas fa-check"></i> Bahasa Inggris</li>
+            <li><i class="fas fa-check"></i> Grup kecil max 8 siswa</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Daftar SMP</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Program SMA -->
+    <div class="program-category">
+      <h3 class="program-subtitle">Program SMA</h3>
+      <div class="programs-grid">
+        <!-- SMA Card -->
+        <div class="program-card">
+          <h4>Paket SMA</h4>
+          <p class="price">Rp 550.000 <span>/bulan</span></p>
+          <ul>
+            <li><i class="fas fa-check"></i> Matematika</li>
+            <li><i class="fas fa-check"></i> Fisika</li>
+            <li><i class="fas fa-check"></i> Kimia</li>
+            <li><i class="fas fa-check"></i> Matematika Lanjutan</li>
+            <li><i class="fas fa-check"></i> Bahasa Inggris</li>
+            <li><i class="fas fa-check"></i> Grup kecil max 8 siswa</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Daftar SMA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= SCHEDULE & PROMO ================ -->
+  <!-- =================================================== -->
+  <section id="schedule" class="schedule">
+    <h2 class="section-title">Jadwal Kelas & Promo</h2>
+
+    <!-- Jadwal SMP -->
+    <div class="schedule-box">
+      <h3>Jadwal SMP</h3>
+      <table>
+        <tr><th>Hari</th><th>Waktu</th><th>Mata Pelajaran</th></tr>
+        <tr><td>Senin</td><td>16:00 - 18:00</td><td>Matematika</td></tr>
+        <tr><td>Rabu</td><td>16:00 - 18:00</td><td>Fisika</td></tr>
+        <tr><td>Jumat</td><td>16:00 - 18:00</td><td>Bahasa Inggris</td></tr>
+      </table>
+    </div>
+
+    <!-- Jadwal SMA -->
+    <div class="schedule-box">
+      <h3>Jadwal SMA</h3>
+      <table>
+        <tr><th>Hari</th><th>Waktu</th><th>Mata Pelajaran</th></tr>
+        <tr><td>Senin</td><td>16:00 - 18:00</td><td>Matematika</td></tr>
+        <tr><td>Selasa</td><td>16:00 - 18:00</td><td>Fisika</td></tr>
+        <tr><td>Rabu</td><td>16:00 - 18:00</td><td>Kimia</td></tr>
+        <tr><td>Kamis</td><td>16:00 - 18:00</td><td>Matematika Lanjutan</td></tr>
+        <tr><td>Jumat</td><td>16:00 - 18:00</td><td>Bahasa Inggris</td></tr>
+      </table>
+    </div>
+
+    <!-- Promo -->
+    <div class="promo-box">
+      <h3>Promo Spesial!</h3>
+      <p>Diskon 20% untuk pendaftaran awal bulan ini.</p>
+      <a href="#contact" class="btn btn-secondary">Klaim Diskon</a>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= ABOUT SECTION =================== -->
+  <!-- =================================================== -->
+  <section id="about" class="about">
+    <h2 class="section-title">Tentang Kami</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>Metode Belajar Efektif</h3>
+        <p>
+          Kami percaya bahwa setiap siswa punya potensi unik. 
+          Dengan pendekatan personal, modul terstruktur, dan latihan intensif, 
+          siswa lebih percaya diri menghadapi ujian sekolah & seleksi masuk PTN.
+        </p>
+        <ul>
+          <li><strong>Diskusi Interaktif</strong> - belajar dua arah</li>
+          <li><strong>Simulasi CBT</strong> - persiapan ujian modern</li>
+          <li><strong>Analisis Hasil</strong> - evaluasi tiap pertemuan</li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=900&q=80" alt="Kelas interaktif">
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= TUTORS SECTION ================== -->
+  <!-- =================================================== -->
+  <section id="tutors" class="tutors">
+    <h2 class="section-title">Tutor Kami</h2>
+    <div class="tutors-grid">
+      <div class="tutor-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Tutor Andi">
+        <h4>Andi Saputra</h4>
+        <p>Matematika | S1 ITB</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Tutor Sinta">
+        <h4>Sinta Dewi</h4>
+        <p>Fisika | S2 UI</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Tutor Rizky">
+        <h4>Rizky Ahmad</h4>
+        <p>Kimia | S1 UGM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= STATS SECTION =================== -->
+  <!-- =================================================== -->
+  <section id="stats" class="stats">
+    <h2 class="section-title">Pencapaian Kami</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3 class="counter" data-target="500">0</h3>
+        <p>Siswa Aktif</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="150">0</h3>
+        <p>Lolos PTN Favorit</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="50">0</h3>
+        <p>Tutor Berpengalaman</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= TESTIMONIALS ==================== -->
+  <!-- =================================================== -->
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">Apa Kata Mereka?</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"Belajar di Atomix seru banget! Nilai fisika saya naik drastis."</p>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Melisa">
+          <div><h4>Melisa</h4><span>SMA 11 Jakarta</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Program SNBT sangat membantu, soal-soalnya mirip dengan aslinya."</p>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Bima">
+          <div><h4>Bima</h4><span>SMA 5 Bandung</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================== FAQ SECTION ==================== -->
+  <!-- =================================================== -->
+  <section id="faq" class="faq">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question"><h3>Apakah ada kelas online?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Ya, tersedia kelas online via Zoom/Google Meet selain offline.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Bagaimana cara daftar?</h3><i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Isi form pendaftaran atau hubungi admin via WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= CONTACT SECTION ================= -->
+  <!-- =================================================== -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Daftar Sekarang</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Merdeka No.123, Jakarta</p>
+        <p><i class="fas fa-phone-alt"></i> +62 812-3456-7890</p>
+        <p><i class="fas fa-envelope"></i> info@atomixacademy.com</p>
+      </div>
+      <div class="contact-form">
+        <form id="registrationForm">
+          <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+          <select id="kelas" name="kelas" required>
+            <option value="">Pilih Kelas</option>
+            <option value="SMP">SMP</option>
+            <option value="SMA">SMA</option>
+          </select>
+          <select id="mata_pelajaran" name="mata_pelajaran" required>
+            <option value="">Pilih Mata Pelajaran</option>
+            <option value="Matematika">Matematika</option>
+            <option value="Fisika">Fisika</option>
+            <option value="Kimia">Kimia</option>
+            <option value="Matematika Lanjutan">Matematika Lanjutan</option>
+            <option value="Bahasa Inggris">Bahasa Inggris</option>
+          </select>
+          <input type="tel" id="nomor_hp" name="nomor_hp" placeholder="Nomor HP / WhatsApp" required>
+          <button type="submit" class="btn btn-primary w-full">Kirim Pendaftaran</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- ================= FOOTER SECTION ================== -->
+  <!-- =================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Atomix Academy</h3>
+        <p>Bimbel modern SMP & SMA. Siap naik nilai, siap SNBT, kuliah impian!</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#programs">Program</a></li>
+          <li><a href="#schedule">Jadwal</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ikuti Kami</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Atomix Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- =================================================== -->
+  <!-- ================= WHATSAPP STICKY ================= -->
+  <!-- =================================================== -->
+  <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20daftar%20di%20Atomix%20Academy" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp"></i><span>Hubungi Admin</span>
+  </a>
+
+  <!-- =================================================== -->
+  <!-- ================== JAVASCRIPT ===================== -->
+  <!-- =================================================== -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

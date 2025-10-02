@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Leaderboard - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/css/lms-ui-fixes.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="dashboard.html">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div class="brand-title">Atomix Academy</div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="leaderboard.html">Leaderboard</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section">
+        <div class="container">
+            <div class="welcome-section">
+                <h1> Leaderboard</h1>
+                <p class="muted">Lihat peringkat siswa terbaik di Atomix Academy</p>
+            </div>
+            
+            <div class="leaderboard-container">
+                <div class="card">
+                    <h2>Peringkat Matematika SMA</h2>
+                    <div id="math-leaderboard">
+                        <!-- Leaderboard items will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Pencapaian Terbaru</h2>
+                    <div class="achievement-grid" id="achievements">
+                        <!-- Achievements will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="leaderboard.js" defer></script>
+</body>
+</html>

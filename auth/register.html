@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Daftar | Atomix Academy</title>
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="auth.css"><!-- auth styles -->
+  <meta name="description" content="Buat akun baru untuk mengakses dashboard pembelajaran Atomix Academy.">
+</head>
+<body data-page="auth">
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Logo Atomix Academy" class="logo">
+        <span>Atomix Academy</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#programs" class="nav-link">Program</a></li>
+        <li><a href="../index.html#schedule" class="nav-link">Jadwal</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Kontak</a></li>
+        <li><a href="auth.html" class="btn btn-small">Login</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <main class="container my-40">
+    <section class="grid" style="grid-template-columns: .9fr 1.1fr; gap: 1.5rem;">
+      <aside class="rounded-16 shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1584697964195-789c7b0e3a2f?auto=format&fit=crop&w=1200&q=80" alt="Ilustrasi belajar" style="width:100%; height:100%; object-fit:cover;">
+      </aside>
+
+      <div class="bg-white rounded-16 shadow-lg p-24">
+        <div class="mb-16">
+          <h1 class="text-3xl text-brand font-800 mb-8">Buat Akun Baru</h1>
+          <p class="text-muted">Gabung dan nikmati pembelajaran interaktif di LMS Atomix Academy.</p>
+        </div>
+
+        <form id="registerForm" autocomplete="off" novalidate>
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap: .75rem;">
+            <label class="font-600">Nama Lengkap
+              <input type="text" name="fullName" placeholder="Nama lengkap Anda" required class="w-full p-12 rounded-10">
+            </label>
+            <label class="font-600">Username
+              <input type="text" name="username" placeholder="contoh: andrew99" minlength="3" required class="w-full p-12 rounded-10">
+            </label>
+          </div>
+
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap: .75rem;">
+            <label class="font-600">Email
+              <input type="email" name="email" placeholder="nama@contoh.com" required class="w-full p-12 rounded-10">
+            </label>
+            <label class="font-600">Nomor WA (opsional)
+              <input type="tel" name="phone" placeholder="08xxxxxxxxxx" class="w-full p-12 rounded-10">
+            </label>
+          </div>
+
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap: .75rem;">
+            <label class="font-600">Kata Sandi
+              <div style="position:relative;">
+                <input type="password" name="password" placeholder="Minimal 6 karakter" minlength="6" required class="w-full p-12 rounded-10 pr-40">
+                <button type="button" class="btn btn-small showpass" style="position:absolute; right:6px; top:6px;">Lihat</button>
+              </div>
+            </label>
+            <label class="font-600">Konfirmasi Kata Sandi
+              <div style="position:relative;">
+                <input type="password" name="confirmPassword" placeholder="Ulangi kata sandi" minlength="6" required class="w-full p-12 rounded-10 pr-40">
+                <button type="button" class="btn btn-small showpass" style="position:absolute; right:6px; top:6px;">Lihat</button>
+              </div>
+            </label>
+          </div>
+
+          <div class="mb-12">
+            <label style="display:flex; gap:.6rem; align-items:center;">
+              <input type="checkbox" name="agree" required>
+              <span>Saya menyetujui <a href="#" onclick="alert('S&K singkat: gunakan data yang valid.');return false;" class="text-brand">Syarat & Ketentuan</a> serta <a href="#" onclick="alert('Privasi singkat: data disimpan di perangkat via localStorage.');return false;" class="text-brand">Kebijakan Privasi</a>.</span>
+            </label>
+          </div>
+
+          <p id="registerError" class="text-base" style="color:#e53935; min-height:22px;"></p>
+
+          <button type="submit" class="btn btn-primary w-full mt-8">Daftar Sekarang</button>
+
+          <p class="mt-12 text-muted">
+            Sudah punya akun?
+            <a href="auth.html" class="text-brand font-600">Masuk di sini</a>.
+          </p>
+        </form>
+
+        <div class="auth-actions mt-16">
+          <a class="btn btn-outline" href="../index.html">Kembali ke Beranda</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Atomix%2C%20saya%20butuh%20bantuan%20pendaftaran" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp"></i><span>Butuh Bantuan?</span>
+  </a>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

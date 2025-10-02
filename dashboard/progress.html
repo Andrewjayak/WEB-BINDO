@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Progress Tracking - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/css/lms-ui-fixes.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="dashboard.html">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div class="brand-title">Atomix Academy</div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="leaderboard.html">Leaderboard</a>
+                <a href="progress.html">Progress</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section">
+        <div class="container">
+            <div class="welcome-section">
+                <h1> Progress Tracking</h1>
+                <p class="muted">Pantau kemajuan pembelajaran Anda secara detail</p>
+            </div>
+            
+            <div class="progress-overview">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Total Jam Belajar</h3>
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">jam</div>
+                    </div>
+                    <div class="card">
+                        <h3>Quiz Diselesaikan</h3>
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">quiz</div>
+                    </div>
+                    <div class="card">
+                        <h3>Rata-rata Skor</h3>
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">nilai</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-charts">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3>Kemajuan Mata Pelajaran</h3>
+                        <div class="subject-progress">
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span>Matematika SMA</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span>Fisika SMA</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span>Kimia SMA</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span>Inggris SMA</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Riwayat Quiz</h3>
+                        <div class="quiz-history">
+                            <div class="history-item">
+                                <div class="history-date">15 Jan 2024</div>
+                                <div class="history-subject">Matematika SMA</div>
+                                <div class="history-score">5/5</div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-date">14 Jan 2024</div>
+                                <div class="history-subject">Fisika SMA</div>
+                                <div class="history-score">4/5</div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-date">13 Jan 2024</div>
+                                <div class="history-subject">Kimia SMA</div>
+                                <div class="history-score">3/5</div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-date">12 Jan 2024</div>
+                                <div class="history-subject">Matematika SMA</div>
+                                <div class="history-score">4/5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="learning-goals">
+                <div class="card">
+                    <h3>Target Pembelajaran</h3>
+                    <div class="goals-grid">
+                        <div class="goal-item">
+                            <div class="goal-icon"></div>
+                            <div class="goal-title">Selesaikan 10 Quiz</div>
+                            <div class="goal-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <span>8/10</span>
+                            </div>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-icon"></div>
+                            <div class="goal-title">Baca 20 Materi</div>
+                            <div class="goal-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                                <span>12/20</span>
+                            </div>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-icon"></div>
+                            <div class="goal-title">Dapatkan Skor Sempurna</div>
+                            <div class="goal-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%"></div>
+                                </div>
+                                <span>2/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="progress.js" defer></script>
+</body>
+</html>

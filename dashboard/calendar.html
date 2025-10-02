@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Jadwal Pembelajaran - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/css/lms-ui-fixes.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="dashboard.html" class="brand">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div>
+                    <div class="brand-title">Atomix Academy</div>
+                    <div class="brand-tagline">Naik Nilai, Siap SNBT & Kuliah Impian</div>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="quiz.html"><i class="fas fa-brain"></i> Quiz</a>
+                <a href="leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a>
+                <a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+                <a href="library.html"><i class="fas fa-book"></i> Perpustakaan</a>
+                <a href="calendar.html" class="active"><i class="fas fa-calendar"></i> Jadwal</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section">
+        <div class="container">
+            <div class="calendar-header">
+                <h1><i class="fas fa-calendar-alt"></i> Jadwal Pembelajaran</h1>
+                <p class="muted">Pantau jadwal kelas, ujian, dan acara penting</p>
+                <div class="calendar-controls">
+                    <button class="btn btn-ghost" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentMonth">Januari 2024</h2>
+                    <button class="btn btn-ghost" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="calendar-view">
+                <div class="calendar-grid">
+                    <div class="calendar-header-row">
+                        <div class="day-header">Sen</div>
+                        <div class="day-header">Sel</div>
+                        <div class="day-header">Rab</div>
+                        <div class="day-header">Kam</div>
+                        <div class="day-header">Jum</div>
+                        <div class="day-header">Sab</div>
+                        <div class="day-header">Min</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Calendar days will be generated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="upcoming-events">
+                <h3><i class="fas fa-clock"></i> Acara Mendatang</h3>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jan</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Matematika SMA - Fungsi Invers</h4>
+                            <p class="event-time"><i class="fas fa-clock"></i> 16:00 - 17:30</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Ruang A</p>
+                            <span class="event-type class">Kelas</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">16</span>
+                            <span class="month">Jan</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Fisika SMA - Mekanika</h4>
+                            <p class="event-time"><i class="fas fa-clock"></i> 16:00 - 17:30</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Ruang B</p>
+                            <span class="event-type class">Kelas</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">17</span>
+                            <span class="month">Jan</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Quiz Matematika SMA</h4>
+                            <p class="event-time"><i class="fas fa-clock"></i> 18:00 - 19:00</p>
+                            <p class="event-location"><i class="fas fa-laptop"></i> Online</p>
+                            <span class="event-type quiz">Quiz</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">Jan</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Ujian Tengah Semester</h4>
+                            <p class="event-time"><i class="fas fa-clock"></i> 08:00 - 12:00</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Ruang Ujian</p>
+                            <span class="event-type exam">Ujian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="schedule-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="weekly">Mingguan</button>
+                    <button class="tab-btn" data-tab="monthly">Bulanan</button>
+                    <button class="tab-btn" data-tab="exams">Ujian</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="weekly">
+                        <div class="weekly-schedule">
+                            <div class="schedule-day">
+                                <h4>Senin</h4>
+                                <div class="schedule-items">
+                                    <div class="schedule-item">
+                                        <span class="time">16:00</span>
+                                        <span class="subject">Matematika SMA</span>
+                                        <span class="room">Ruang A</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Selasa</h4>
+                                <div class="schedule-items">
+                                    <div class="schedule-item">
+                                        <span class="time">16:00</span>
+                                        <span class="subject">Fisika SMA</span>
+                                        <span class="room">Ruang B</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Rabu</h4>
+                                <div class="schedule-items">
+                                    <div class="schedule-item">
+                                        <span class="time">16:00</span>
+                                        <span class="subject">Kimia SMA</span>
+                                        <span class="room">Ruang C</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Kamis</h4>
+                                <div class="schedule-items">
+                                    <div class="schedule-item">
+                                        <span class="time">16:00</span>
+                                        <span class="subject">Matematika SMA</span>
+                                        <span class="room">Ruang A</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-day">
+                                <h4>Jumat</h4>
+                                <div class="schedule-items">
+                                    <div class="schedule-item">
+                                        <span class="time">16:00</span>
+                                        <span class="subject">Inggris SMA</span>
+                                        <span class="room">Ruang D</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="monthly">
+                        <div class="monthly-overview">
+                            <div class="month-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">20</span>
+                                    <span class="stat-label">Total Kelas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Quiz</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">2</span>
+                                    <span class="stat-label">Ujian</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">30</span>
+                                    <span class="stat-label">Jam Belajar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="exams">
+                        <div class="exams-list">
+                            <div class="exam-item">
+                                <div class="exam-date">
+                                    <span class="day">20</span>
+                                    <span class="month">Jan</span>
+                                </div>
+                                <div class="exam-content">
+                                    <h4>Ujian Tengah Semester</h4>
+                                    <p class="exam-subjects">Matematika, Fisika, Kimia</p>
+                                    <p class="exam-time"><i class="fas fa-clock"></i> 08:00 - 12:00</p>
+                                    <span class="exam-status upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+                            <div class="exam-item">
+                                <div class="exam-date">
+                                    <span class="day">25</span>
+                                    <span class="month">Feb</span>
+                                </div>
+                                <div class="exam-content">
+                                    <h4>Ujian Akhir Semester</h4>
+                                    <p class="exam-subjects">Semua Mata Pelajaran</p>
+                                    <p class="exam-time"><i class="fas fa-clock"></i> 08:00 - 16:00</p>
+                                    <span class="exam-status upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="calendar.js" defer></script>
+</body>
+</html>

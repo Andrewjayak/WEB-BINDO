@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Perpustakaan Digital - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/css/lms-ui-fixes.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="dashboard.html" class="brand">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div>
+                    <div class="brand-title">Atomix Academy</div>
+                    <div class="brand-tagline">Naik Nilai, Siap SNBT & Kuliah Impian</div>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="quiz.html"><i class="fas fa-brain"></i> Quiz</a>
+                <a href="leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a>
+                <a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+                <a href="library.html" class="active"><i class="fas fa-book"></i> Perpustakaan</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section">
+        <div class="container">
+            <div class="library-header">
+                <h1><i class="fas fa-book-open"></i> Perpustakaan Digital</h1>
+                <p class="muted">Akses ribuan materi pembelajaran, e-book, dan sumber belajar berkualitas tinggi</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari materi, e-book, atau topik..." id="searchInput">
+                    <button class="btn btn-accent"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <div class="library-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Semua</button>
+                    <button class="filter-tab" data-filter="ebook">E-Book</button>
+                    <button class="filter-tab" data-filter="video">Video</button>
+                    <button class="filter-tab" data-filter="pdf">PDF</button>
+                    <button class="filter-tab" data-filter="quiz">Quiz</button>
+                </div>
+                <div class="filter-categories">
+                    <select id="categoryFilter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="matematika">Matematika</option>
+                        <option value="fisika">Fisika</option>
+                        <option value="kimia">Kimia</option>
+                        <option value="inggris">Inggris</option>
+                        <option value="biologi">Biologi</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="library-content">
+                <div class="grid grid-3">
+                    <div class="library-item" data-type="ebook" data-category="matematika">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Matematika SMA">
+                            <div class="item-type">
+                                <i class="fas fa-book"></i> E-Book
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>Matematika SMA Kelas 10</h4>
+                            <p class="item-description">Buku panduan lengkap matematika SMA kelas 10 dengan contoh soal dan pembahasan</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Dr. Ahmad Rizki</span>
+                                <span class="item-pages"><i class="fas fa-file-alt"></i> 250 halaman</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Baca</button>
+                                <button class="btn btn-ghost btn-sm">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-item" data-type="video" data-category="fisika">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e43c6c4b0a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Fisika SMA">
+                            <div class="item-type">
+                                <i class="fas fa-play"></i> Video
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>Fisika SMA - Mekanika</h4>
+                            <p class="item-description">Video pembelajaran interaktif tentang konsep mekanika dan gerak</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Prof. Siti Nurhaliza</span>
+                                <span class="item-duration"><i class="fas fa-clock"></i> 45 menit</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Tonton</button>
+                                <button class="btn btn-ghost btn-sm">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-item" data-type="pdf" data-category="kimia">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Kimia SMA">
+                            <div class="item-type">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>Kimia SMA - Stoikiometri</h4>
+                            <p class="item-description">Modul pembelajaran stoikiometri dengan latihan soal dan pembahasan</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Dr. Budi Santoso</span>
+                                <span class="item-pages"><i class="fas fa-file-alt"></i> 120 halaman</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Baca</button>
+                                <button class="btn btn-ghost btn-sm">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-item" data-type="quiz" data-category="matematika">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Quiz Matematika">
+                            <div class="item-type">
+                                <i class="fas fa-brain"></i> Quiz
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>Quiz Matematika - Fungsi</h4>
+                            <p class="item-description">Kumpulan soal latihan tentang fungsi matematika dengan pembahasan</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Tim Akademik</span>
+                                <span class="item-questions"><i class="fas fa-question-circle"></i> 25 soal</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Kerjakan</button>
+                                <button class="btn btn-ghost btn-sm">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-item" data-type="ebook" data-category="inggris">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Inggris SMA">
+                            <div class="item-type">
+                                <i class="fas fa-book"></i> E-Book
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>English Grammar Master</h4>
+                            <p class="item-description">Panduan lengkap grammar bahasa Inggris untuk SMA</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Ms. Dewi Lestari</span>
+                                <span class="item-pages"><i class="fas fa-file-alt"></i> 180 halaman</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Baca</button>
+                                <button class="btn btn-ghost btn-sm">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-item" data-type="video" data-category="matematika">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Matematika Video">
+                            <div class="item-type">
+                                <i class="fas fa-play"></i> Video
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4>Matematika - Kalkulus Dasar</h4>
+                            <p class="item-description">Video pembelajaran kalkulus dasar dengan animasi interaktif</p>
+                            <div class="item-meta">
+                                <span class="item-author"><i class="fas fa-user"></i> Dr. Fajar Nugroho</span>
+                                <span class="item-duration"><i class="fas fa-clock"></i> 60 menit</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-accent btn-sm">Tonton</button>
+                                <button class="btn btn-ghost btn-sm">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="library-stats">
+                <div class="grid grid-4">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">E-Book</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Video</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label">PDF</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Quiz</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="library.js" defer></script>
+</body>
+</html>

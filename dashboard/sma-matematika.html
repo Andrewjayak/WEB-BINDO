@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SMA - Matematika - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="dashboard.html">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div class="brand-title">Atomix Academy</div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard/dashboard.html">Dashboard</a>
+                <a href="dashboard/quiz.html">Quiz</a>
+                <a href="dashboard/leaderboard.html">Leaderboard</a>
+                <a href="dashboard/progress.html">Progress</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section">
+        <div class="container">
+            <div class="breadcrumb">Dashboard / SMA / Matematika</div>
+            <img class="hero-img" alt="Matematika SMA - Fungsi dan Grafik" src="https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80">
+            <h1>Matematika SMA - Komposisi & Fungsi Invers</h1>
+            <p class="muted">Pelajari konsep fungsi matematika dengan pendekatan visual dan interaktif.</p>
+            
+            <div class="lesson">
+                <h3> Komposisi Fungsi</h3>
+                <img src="https://images.unsplash.com/photo-1635070041078-e43c6c4b0a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Komposisi Fungsi" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin: 1rem 0;">
+                <ul class="bullet">
+                    <li>Definisi: <code>(f  g)(x) = f(g(x))</code>, umumnya tidak komutatif.</li>
+                    <li>Sifat asosiatif & identitas: <code>I(x)=x</code>.</li>
+                    <li>Contoh: jika <code>f(x)=2x+8</code>, <code>g(x)=4x-8</code> maka <code>(fg)(x)=8x-8</code>.</li>
+                </ul>
+                <div class="interactive-example">
+                    <h4> Contoh Interaktif</h4>
+                    <p>Diketahui f(x) = 2x + 3 dan g(x) = x - 1. Hitung (f  g)(x):</p>
+                    <div class="calculation-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">(f  g)(x) = f(g(x))</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">= f(x - 1)</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">= 2(x - 1) + 3</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">= 2x - 2 + 3</span>
+                        </div>
+                        <div class="step final">
+                            <span class="step-number">5</span>
+                            <span class="step-text">= 2x + 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3> Fungsi Invers</h3>
+                <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Fungsi Invers" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin: 1rem 0;">
+                <ul class="bullet">
+                    <li>Fungsi bijektif memiliki invers <code>f</code> sehingga <code>f(f(x))=x</code>.</li>
+                    <li>Langkah umum: ganti <code>f(x)=y</code>, tukar x dan y, selesaikan untuk y, itulah <code>f(x)</code>.</li>
+                </ul>
+                <div class="note">
+                    <strong> Latihan:</strong> Diketahui <code>f(x)=x+1</code> dan <code>(fg)(x)=3x+4</code>. Tentukan <code>g(4)</code>.
+                </div>
+                <div class="interactive-example">
+                    <h4> Contoh Interaktif</h4>
+                    <p>Diketahui f(x) = 3x - 2. Tentukan f(x):</p>
+                    <div class="calculation-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">y = 3x - 2</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">x = 3y - 2 (tukar x dan y)</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">x + 2 = 3y</span>
+                        </div>
+                        <div class="step final">
+                            <span class="step-number">4</span>
+                            <span class="step-text">y = (x + 2)/3</span>
+                        </div>
+                    </div>
+                    <p class="result">Jadi, f(x) = (x + 2)/3</p>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3> Grafik Fungsi</h3>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Grafik Fungsi" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin: 1rem 0;">
+                <ul class="bullet">
+                    <li>Menggambar grafik fungsi linear, kuadrat, dan eksponensial</li>
+                    <li>Transformasi grafik: translasi, refleksi, dan dilatasi</li>
+                    <li>Analisis domain dan range dari grafik fungsi</li>
+                </ul>
+                <div class="interactive-example">
+                    <h4> Contoh Interaktif</h4>
+                    <p>Gambarkan grafik fungsi f(x) = x - 4x + 3:</p>
+                    <div class="calculation-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Titik puncak: x = -b/2a = 4/2 = 2</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">f(2) = 4 - 8 + 3 = -1</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Titik puncak: (2, -1)</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Titik potong sumbu y: (0, 3)</span>
+                        </div>
+                        <div class="step final">
+                            <span class="step-number">5</span>
+                            <span class="step-text">Titik potong sumbu x: (1, 0) dan (3, 0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lesson-actions">
+                <a href="quiz.html" class="btn btn-accent">Mulai Quiz</a>
+                <a href="dashboard.html" class="btn btn-ghost">Kembali ke Dashboard</a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../js/lms.js" defer></script>
+</body>
+</html>

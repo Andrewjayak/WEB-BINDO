@@ -1,0 +1,319 @@
+
+/* =====================================================
+   Atomix Academy - AUTH PAGES CSS
+   Scope: login (auth.html) & register (register.html)
+   Depends on: assets/css/styles.css (global)
+   This file provides page-specific polish and overrides.
+   ===================================================== */
+
+/* Root palette (inherits from styles.css) */
+:root {
+  --auth-bg: radial-gradient(1200px 600px at 90% -10%, rgba(25,118,210,.12), transparent 55%),
+             radial-gradient(900px 500px at -10% 110%, rgba(67,160,71,.12), transparent 55%),
+             linear-gradient(180deg, #f9fbff, #eef4ff 48%, #f9fbff 100%);
+  --auth-card-bg: #ffffff;
+  --auth-card-br: 16px;
+  --auth-shadow: 0 18px 50px rgba(24, 56, 116, .15);
+  --auth-muted: #6b7280;
+}
+
+/* Page background */
+body[data-page="auth"] {
+  min-height: 100vh;
+  background: var(--auth-bg);
+}
+
+/* Navbar override on auth pages */
+body[data-page="auth"] .navbar {
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(13,71,161,.08);
+}
+
+/* Layout helpers (auth container) */
+.container.my-40 { margin-top: 40px; margin-bottom: 40px; }
+
+/* Common card style */
+.auth-card, .bg-white.rounded-16.shadow-lg {
+  background: var(--auth-card-bg);
+  border-radius: var(--auth-card-br);
+  box-shadow: var(--auth-shadow);
+  border: 1px solid #e7efff;
+}
+
+/* Illustration panel */
+.auth-illustration, aside.rounded-16.shadow-lg {
+  border-radius: var(--auth-card-br);
+  overflow: hidden;
+  box-shadow: var(--auth-shadow);
+  border: 1px solid #e7efff;
+}
+.auth-illustration img, aside.rounded-16.shadow-lg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Headings */
+h1.text-3xl.text-brand {
+  letter-spacing: .2px;
+}
+.text-muted { color: var(--auth-muted); }
+
+/* Form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  appearance: none;
+  background: #fbfdff;
+  border: 2px solid #e3ebff;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  color: #1f2937;
+}
+input::placeholder { color: #9aa5b1; }
+input:focus, select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25,118,210,.15);
+  background: #fff;
+}
+
+/* Password toggle button inside inputs */
+button.showpass,
+#togglePassword {
+  background: #eef4ff;
+  color: #0d47a1;
+  border: 2px solid #d7e4ff;
+  font-weight: 700;
+  transition: all .2s ease;
+}
+button.showpass:hover,
+#togglePassword:hover {
+  background: #e3edff;
+  transform: translateY(-1px);
+}
+
+/* Error messages */
+#loginError,
+#registerError {
+  padding: 6px 2px;
+  min-height: 22px;
+}
+
+/* Remember row */
+#remember {
+  width: 18px; height: 18px;
+  border-radius: 4px;
+  border: 2px solid #bcd2ff;
+}
+
+/* Button full width */
+button[type="submit"].w-full {
+  height: 48px;
+  border-radius: 12px;
+  letter-spacing: .3px;
+}
+
+/* Links */
+a.text-brand {
+  color: #1565c0;
+}
+a.text-brand:hover {
+  color: #0b3a83;
+  text-decoration: underline;
+}
+
+/* Details (Demo account) */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  padding: .5rem .75rem;
+  background: #f1f6ff;
+  border: 1px solid #dfeaff;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #0b3a83;
+  cursor: pointer;
+}
+details[open] > summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+details > p {
+  margin: 0;
+  padding: .6rem .8rem .8rem;
+  border: 1px solid #dfeaff;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #ffffff;
+}
+
+/* Under form actions */
+.auth-actions .btn {
+  min-height: 44px;
+}
+
+/* Grid overrides for auth layouts */
+@media (max-width: 1024px) {
+  main .grid { grid-template-columns: 1fr !important; }
+  aside.rounded-16.shadow-lg { order: -1; max-height: 320px; }
+}
+
+/* Subtle entrance animation */
+@keyframes authFadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bg-white.rounded-16.shadow-lg,
+aside.rounded-16.shadow-lg {
+  animation: authFadeUp .5s ease both;
+}
+
+/* Field validity helpers */
+.form-error { border-color: #e53935 !important; }
+.form-success { border-color: #43a047 !important; }
+
+/* Compact helpers for labels */
+label.font-600 { display: block; color: #0b3a83; margin-bottom: .35rem; }
+
+/* Improve inputs inside label */
+label.font-600 > input {
+  margin-top: .35rem;
+}
+
+/* Placeholders in darkened state */
+input::placeholder { opacity: .85; }
+
+/* Divider (if used in the future for social login) */
+.auth-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: .75rem;
+  color: #7a8bb2;
+  margin: 18px 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  height: 1px;
+  background: #dfe7ff;
+}
+
+/* Social login buttons (optional; not wired) */
+.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: .5rem;
+}
+.social-buttons .btn {
+  background: #f7faff;
+  border-color: #dfe7ff;
+  color: #0b3a83;
+}
+.social-buttons .btn:hover {
+  background: #eef4ff;
+}
+
+/* Fine-tune spacing on forms */
+.p-24 { padding: 24px; }
+.mb-6 { margin-bottom: 6px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.my-40 { margin-top: 40px; margin-bottom: 40px; }
+
+/* Inputs sizing */
+.p-12 { padding: 12px; }
+.rounded-10 { border-radius: 10px; }
+.rounded-16 { border-radius: 16px; }
+.pr-40 { padding-right: 40px; }
+
+/* Shadow (override ensure) */
+.shadow-lg { box-shadow: var(--auth-shadow) !important; }
+
+/* Media tweak: narrow phones */
+@media (max-width: 420px) {
+  .btn.btn-small { font-size: .9rem; }
+  details > summary { font-size: .95rem; }
+  input, select { font-size: .98rem; }
+}
+
+/* Decorative header underline (optional if used) */
+.auth-underline {
+  position: relative;
+  display: inline-block;
+}
+.auth-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #1976d2, #43a047);
+  opacity: .2;
+}
+
+/* Pulsing focus ring for submit button on hover */
+button[type="submit"].btn-primary:hover {
+  box-shadow:
+    0 18px 40px rgba(25,118,210,.35),
+    0 0 0 6px rgba(25,118,210,.12);
+}
+
+/* Minimal progress bar (future use) */
+.auth-progress {
+  height: 6px;
+  background: #e9f1ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.auth-progress > span {
+  display: block;
+  height: 100%;
+  width: 35%;
+  background: linear-gradient(90deg, #1976d2, #43a047);
+  border-radius: 999px;
+  animation: authProgress 2.2s ease-in-out infinite alternate;
+}
+@keyframes authProgress {
+  from { width: 20%; }
+  to   { width: 90%; }
+}
+
+/* Toast/notice (future) */
+.auth-toast {
+  position: fixed;
+  top: 90px; right: 22px;
+  background: #0d47a1;
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--auth-shadow);
+  z-index: 1500;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .25s ease;
+}
+.auth-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ensure hamburger visible on small screens */
+@media (max-width: 960px) {
+  .navbar .hamburger { display: block; }
+}

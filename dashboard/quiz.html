@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Quiz Interaktif - Atomix Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/css/lms-ui-fixes.css">
+    <link rel="stylesheet" href="assets/css/patch-quiz-dashboard.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="dashboard.html">
+                <img src="../assets/logo.png" alt="Logo Atomix Academy" class="logo-img">
+                <div class="brand-title">Atomix Academy</div>
+            </a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="leaderboard.html">Leaderboard</a>
+            </nav>
+            <div class="nav-cta">
+                <button id="btn-logout" class="btn btn-ghost">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="section on-dark">
+        <div class="container">
+            <div class="quiz-header">
+                <h1>Quiz Matematika SMA</h1>
+                <p class="muted">Uji pemahaman Anda tentang Komposisi & Fungsi Invers</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="quiz-progress" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">Pertanyaan 1 dari 10</span>
+                </div>
+            </div>
+            
+            <div class="quiz-container">
+                <div class="quiz-question" id="quiz-question">
+                    <h3 id="question-text">Loading...</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="quiz-actions">
+                    <button id="prev-btn" class="btn btn-ghost" disabled>Sebelumnya</button>
+                    <button id="next-btn" class="btn btn-accent" disabled>Selanjutnya</button>
+                </div>
+            </div>
+            
+            <div class="quiz-results" id="quiz-results" style="display: none;">
+                <div class="result-card">
+                    <h2>Hasil Quiz</h2>
+                    <div class="score-display">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-total">/10</span>
+                    </div>
+                    <p id="score-message">Bagus!</p>
+                    <div class="result-actions">
+                        <button id="retry-btn" class="btn btn-accent">Coba Lagi</button>
+                        <a href="dashboard.html" class="btn btn-ghost">Kembali ke Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="quiz.js" defer></script>
+</body>
+</html>

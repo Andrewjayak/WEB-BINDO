@@ -1,0 +1,173 @@
+
+/* ============================================================
+   Atomix Academy — LMS UI Fixes (non-destructive)
+   Purpose: memperbaiki jarak antar elemen, grid yang berdempetan,
+            konsistensi card, dan responsivitas dashboard + halaman LMS.
+   Cara pakai: load setelah styles.css
+   Catatan: TIDAK menghapus apapun. Hanya override styling.
+   ============================================================ */
+
+/* ---------- Scale & Spacing tokens ---------- */
+:root{
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --card-radius: var(--radius-lg, 1rem);
+  --section-space-y: clamp(3rem, 6vw, 5rem);
+}
+
+/* ---------- Global safe gap ---------- */
+.section{ padding-top: var(--section-space-y); padding-bottom: var(--section-space-y); }
+.container{ width: var(--container, min(1200px, calc(100% - 2rem))); margin-inline: auto; }
+
+/* Tingkatkan default gap grid agar tidak berdempetan */
+.grid{ gap: var(--space-8) !important; }
+
+/* Pastikan varian grid responsif agar tidak terlalu rapat di layar kecil */
+.grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 1200px){
+  .grid-4{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 992px){
+  .grid-3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-4{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px){
+  .grid-2, .grid-3, .grid-4{ grid-template-columns: 1fr; }
+}
+
+/* Alternatif lebih lentur untuk beberapa seksi (tanpa ubah HTML): */
+.subject-section .grid.grid-4,
+.subject-section .grid.grid-3,
+.stats-overview .grid,
+.library-content .grid,
+.achievement-grid,
+.quick-actions .grid,
+.progress-overview .grid,
+.progress-charts .grid,
+.schedule-grid{
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ---------- Card polish ---------- */
+.card{
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,.1));
+  border: 1px solid var(--line, #e2e8f0);
+  background: var(--surface, #fff);
+}
+.card + .card{ margin-top: var(--space-8); }
+
+/* Spasi internal komponen dalam card */
+.card h3, .card h2, .card h4{ margin-bottom: .65rem; }
+.card .muted{ margin-top: .25rem; }
+.card .card-content{ display: grid; gap: .75rem; }
+
+/* ---------- Link card (subject) ---------- */
+.link-card{ display: grid; grid-template-rows: auto 1fr; overflow: hidden; gap: 0; }
+.link-card .card-image{ position: relative; overflow: hidden; }
+.link-card .card-image img{
+  width: 100%; height: auto;
+  aspect-ratio: 16/9; object-fit: cover; display: block;
+}
+.link-card .card-overlay{
+  position: absolute; inset: 0; display: grid; place-items: center;
+  background: linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,0));
+  opacity: 0; transition: opacity .2s ease;
+}
+.link-card:hover .card-overlay{ opacity: 1; }
+
+/* ---------- Progress bar spacing ---------- */
+.progress-bar{ margin-top: .5rem; }
+.progress-text{ display: inline-block; margin-top: .35rem; color: var(--muted); font-weight: 600; }
+
+/* ---------- Welcome / hero area ---------- */
+.welcome-section{
+  display: grid; align-items: center; gap: var(--space-8);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: var(--space-12);
+}
+.welcome-actions{ gap: var(--space-4); }
+.welcome-content > h1{ margin-bottom: .5rem; }
+
+@media (max-width: 992px){
+  .welcome-section{ grid-template-columns: 1fr; }
+}
+
+/* ---------- Stats area ---------- */
+.stats-overview{ margin-top: var(--space-12); }
+.stat-card{ display: grid; gap: .35rem; }
+.stat-icon{ margin-bottom: .6rem; }
+.stat-trend{ margin-top: .45rem; }
+
+/* ---------- Dashboard grid tightening (tanpa tumpang tindih) ---------- */
+.dashboard-stats .grid{ align-items: stretch; }
+.dashboard-stats .card{ height: 100%; display: grid; align-content: start; }
+
+/* ---------- Library layout ---------- */
+.library-header{ margin-bottom: var(--space-8); }
+.library-content .grid{ align-items: stretch; }
+.library-item{ display: grid; grid-template-rows: auto 1fr; border-radius: var(--card-radius); overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.library-item .item-image img{ aspect-ratio: 16/9; object-fit: cover; width: 100%; }
+.library-item .item-content{ padding: 1rem 1.25rem; display: grid; gap: .6rem; }
+.library-item .item-actions{ display: flex; gap: .5rem; margin-top: .5rem; flex-wrap: wrap; }
+
+/* ---------- Leaderboard ---------- */
+.leaderboard-container{ display: grid; gap: var(--space-8); }
+.leaderboard-item + .leaderboard-item{ margin-top: .5rem; }
+
+/* ---------- Progress page ---------- */
+.subject-progress .progress-item{ margin-bottom: .85rem; }
+.history-item{ display:flex; align-items:center; justify-content:space-between; padding: .85rem 1rem; border:1px solid var(--line); border-radius: .75rem; background: var(--surface); }
+.history-item + .history-item{ margin-top: .75rem; }
+
+/* ---------- Quiz page ---------- */
+.quiz-container{ gap: var(--space-6); }
+.quiz-options{ gap: var(--space-4); }
+.quiz-actions{ gap: var(--space-4); }
+
+/* ---------- Schedule cards ---------- */
+.schedule-card{ gap: var(--space-6); }
+
+/* ---------- Navbar tweaks ---------- */
+.nav-inner{ gap: var(--space-6); }
+.nav-links{ gap: var(--space-5); flex-wrap: wrap; }
+.nav-cta{ gap: var(--space-4); }
+
+/* ---------- Utilities (tanpa ubah HTML) ---------- */
+.stack-lg > * + *{ margin-top: var(--space-8) !important; }
+.stack-md > * + *{ margin-top: var(--space-6) !important; }
+.stack-sm > * + *{ margin-top: var(--space-4) !important; }
+
+/* Margin bottom aman untuk setiap .subject-section */
+.subject-section{ margin-top: var(--space-12); }
+
+/* Card hover lembut (tanpa animasi berlebihan) */
+.card:hover{ transform: translateY(-2px); }
+
+/* ---------- Tight screens ---------- */
+@media (max-width: 480px){
+  .nav-links{ gap: .75rem; }
+  .card{ padding: 1.25rem; }
+  .welcome-section{ gap: var(--space-6); }
+  .subject-section{ margin-top: var(--space-10); }
+}
+
+/* ---------- Fix inconspicuous collisions ---------- */
+/* Batas minimum untuk isi card agar tidak gepeng */
+.card .card-content, .library-item .item-content, .quiz-question{ min-height: 1px; }
+
+/* Pastikan gambar tidak menekan teks */
+.card-image{ flex: 0 0 auto; }
+
+/* ---------- End of file ---------- */
